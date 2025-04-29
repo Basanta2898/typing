@@ -1,0 +1,1040 @@
+/*======================================
+Theme Name: Byte Back
+Theme URI: https://byteback.org/
+Description: CByte Back Theme
+Version: 1.0
+Author: Left Plus Right
+Author URI: http://www.leftplusright.com
+Template: Divi
+======================================*/
+
+
+/* General Styles
+ * ============================ */
+body, p {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.et_fixed_nav #top-header.et-fixed-header { 
+	position: absolute !important; 
+} 
+.et-fixed-header { 
+	top: 0px!important; 
+}
+
+.zoom-hover {
+	transition: all .2s ease-in-out;
+}
+
+.zoom-hover:hover {
+    transform: scale(1.025);
+    position: relative;
+    z-index: 9999;
+}
+
+
+/* Video Header Block
+ * ============================= */
+.video-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-hdr h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85) !important;
+}
+
+.video-hdr h1 {
+    font-weight: bold;
+}
+
+.video-hdr a.et_pb_button {
+    width: 205px !important;
+}
+
+@media screen and (max-width: 980px) {
+	.video-hdr {
+		flex-direction: column;
+	}
+}
+
+.et_pb_video iframe {
+    max-height: 400px !important;
+}
+
+/* Main Navigation
+ * ============================= */
+
+#et_search_icon:before,
+#top-header .et-fixed-header #et_search_icon:before {
+    color: #88C800 !important;
+}
+
+nav#top-menu-nav li.menu-item a::after {
+    display: none;
+}
+#top-menu .menu-item-has-children>a:first-child {
+    padding-right: initial;
+}
+
+#top-menu .menu-item:before{
+ content: '|';
+ position: absolute;
+ right: 7px;
+ color: #ccc;
+}
+ 
+#top-menu .menu-item:last-child:before{
+ content:'';
+}
+ 
+#top-menu .menu-item-has-children .sub-menu .menu-item:before{
+ content:'';
+}
+
+#top-menu li a {
+    margin: 0 15px;
+}
+
+#top-menu li.current-menu-item a,
+#top-menu li.current-page-parent a {
+	border-bottom: 3px solid #88C800;
+    margin-bottom: 25px;
+    padding-bottom: 12px !important;
+}
+
+#top-menu li ul.sub-menu li a {
+	border-bottom: none !important;
+    padding-bottom: initial !important;
+}
+
+#top-menu li.donate-cta a:hover {
+    color: #88C800 !important;
+}
+
+/* Dropdown Menu */
+#top-menu li ul.sub-menu li a {
+    font-size: 15px;
+    text-transform: unset;
+    font-weight: normal;
+	margin: 3px 0;
+}
+
+
+li.cta {
+    background: #F0F4F7;
+    margin-top: 10px !important;
+    display: block !important;
+    margin-bottom: -20px !important;
+    padding: 10px 20px !important;
+	border-radius: 0px 0px 4px 4px;
+
+}
+
+.nav ul#top-menu li a:hover,
+#top-menu li ul.sub-menu li a:hover {
+    background-color: none !important;
+	color: #188BFF;
+}
+
+li.cta a {
+    font-weight: bold !important;
+    padding-bottom: 10px;
+    display: block;
+    background: url(https://byteback.org/wp-content/uploads/2020/04/icn-cta-arrow.png) center right no-repeat !important;
+    background-size: 13px !important;
+	padding-top: 0px !important;
+
+}
+
+@media (max-width: 980px) {
+	li.cta a {
+		padding-bottom: 4px !important;
+
+	}
+}
+
+ul.sub-menu {
+    border-radius: 4px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 5px 20px rgba(0,0,0,.15) !important;
+}
+
+#top-menu li li.current-menu-item a {
+    color: #88C800;
+	font-weight: bold !Important;
+}
+
+#top-menu li ul.sub-menu li a {
+    margin: 0 !important;
+    padding: 6px 5px !important;
+}
+
+#top-menu li ul.sub-menu li a {
+    opacity: 1 !important;
+    background: none;
+}
+
+
+/* Secondary Dropdown Menu
+ * ========================= */
+
+#et-secondary-nav .menu-item-has-children>a:first-child:after {
+    display: none;
+}
+
+#et-secondary-nav .menu-item-has-children>a:first-child {
+    padding: initial;
+/*     padding: 3px 8px 11px; */
+	padding: 3px 8px;
+    margin-bottom: 11px;
+}
+
+#et-secondary-nav li ul.sub-menu li {
+    text-align: left;
+}
+
+#et-secondary-nav li ul.sub-menu li a {
+    padding: 12px 5px;
+    font-size: 13px;
+}
+
+/* #et-secondary-nav li ul.sub-menu {
+    left: 0;
+    width: max-content;
+} */
+#et-secondary-nav li ul.sub-menu {
+    left: -20px;
+    width: max-content;
+/*     top: 25px; */
+}
+
+/* Fixed Menu Bar
+ * =========================== */
+#main-header.et-fixed-header {
+	box-shadow: 0 8px 39px rgba(6,61,106,.15)!important;
+	-moz-box-shadow: 0 8px 39px rgba(6,61,106,.15)!important;
+	-webkit-box-shadow: 0 8px 39px rgba(6,61,106,.15)!important;
+}
+
+
+
+/* Secondary Navigation
+ * ============================ */
+
+#et-secondary-nav li.current-menu-item a {
+    background: #188BFF;
+    padding: 3px 5px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 4px;
+}
+
+
+
+/* Top Sub Menu Social Icons
+ * ============================= */
+
+#top-header #et-info {
+    position: relative;
+    top: 4px;
+}
+
+#top-header li.social {
+    margin-right: 8px !important;
+}
+
+#top-header li.social a span {
+    content: " ";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#top-header li.social a span.insta {background: url(https://byteback.org/wp-content/uploads/2020/04/icon-social-insta.png) center center no-repeat;background-size: cover;}
+#top-header li.social a span.fb {background: url(https://byteback.org/wp-content/uploads/2020/04/icon-social-fb.png) center center no-repeat;background-size: cover;}
+#top-header li.social a span.linkedin {background: url(https://byteback.org/wp-content/uploads/2020/04/icon-social-linkedin.png) center center no-repeat;background-size: cover;}
+#top-header li.social a span.twitter {background: url(https://byteback.org/wp-content/uploads/2020/04/icon-social-twitter.png) center center no-repeat;background-size: cover;}
+#top-header li.social a span.youtube {background: url(https://byteback.org/wp-content/uploads/2020/06/icn-youtube.png) center center no-repeat;background-size: cover;}
+
+
+#top-header .sub-menu li.menu-item {
+    padding: 0;
+}
+
+#top-header .sub-menu li.menu-item a {
+    padding: 12px 25px;
+}
+
+#top-header .sub-menu li.menu-item a:hover {
+    background: #095fb7;
+}
+
+@media screen and (max-width: 980px) {
+	li.social {
+		display: none !important;
+	}
+	ul.sub-menu {
+		box-shadow: none !important; 
+		margin-bottom: 40px;
+	}
+	.sub-menu li a {
+		border: none;
+	}
+	#top-header #et-info {
+		position: relative;
+		top: 0px;
+	}
+}
+
+
+
+
+
+/* Quick Links Side Menu
+ * =========================== */
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li a {
+    color: #063D6A;
+    padding: 5px 35px;
+    display: block;
+	transition: all .2s ease-in-out;
+}
+
+.quick-links ul li.default {
+    border-left: 5px solid #88C800;
+}
+
+.quick-links ul li.default a {
+    padding: 5px 35px 5px 30px;
+}
+
+.quick-links ul li a:hover {
+/* 	color: #88C800; */
+	color: #5c8604;
+}
+
+.quick-links ul li {
+    margin: 5px 0;
+}
+
+
+/* Interest Form
+ * ========================== */
+.interest-form span.et_pb_contact_field_options_title {
+    font-size: 25px;
+}
+
+
+
+/* Location Selector
+ * ========================== */
+
+#location-selector select {
+    width: 100%;
+    background: transparent;
+    padding: 20px !important;
+    border: 3px solid #00679933;
+    font-size: 17px;
+}
+
+
+/* Calendar of Events
+ * =========================== */
+.tribe-events-calendar-month__body {
+	background: #fff;
+}
+
+.tribe-common .tribe-common-c-btn, 
+.tribe-common a.tribe-common-c-btn {
+	background: #188BFF !important;
+}
+
+.cal-hdr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 155px;
+    z-index: 999;
+    text-align: center;
+	background-size: contain;
+    background-position: center right;
+    background-image: url(https://byteback.org/wp-content/uploads/2020/04/gfx-hdr-bkgd.png),linear-gradient(309deg,#00AAFF 0%,#188BFF 38%)!important;
+    background-repeat: no-repeat;
+}
+
+
+.post-type-archive-tribe_events div#et-main-area,
+.tribe_events-template-default div#et-main-area {
+    position: relative;
+}
+
+.tribe-events-view {
+    padding-top: 100px;
+}
+
+.tribe-events-pg-template {
+    padding-top: 180px;
+}
+
+.cal-hdr h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(255,255,255,0.53)!important;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    margin-top: 40px;
+	padding: 0;
+}
+
+.tribe-events-pg-template .cal-hdr h2 {
+	margin-bottom: -6px;
+}
+
+.cal-hdr h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 35px;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+
+div#tribe-events-content {
+    background: white;
+    padding: 50px;
+    border: 1px solid #e0e0e0;
+}
+
+.tribe-events-page-template h4 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+.tribe-events-cal-links {
+    margin-bottom: 50px !important;
+}
+
+
+
+
+/* Homepage
+ * =========================== */
+
+/* What's New
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-= */
+.whats-new .et_pb_code_inner,
+.whats-new .et_pb_code_inner .et-fb-editable-element__html{
+    display: flex;
+    align-items: center;
+	flex-direction: row;
+    justify-content: left;
+}
+
+.whats-new .date {
+    border-right: 1px solid #ccc;
+    margin-right: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.whats-new .date .month {
+	font-weight: bold;
+}
+.whats-new .date .day {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.whats-new .event-details a {
+    color: #063D6A;
+}
+
+.whats-new .event-details  span.title {
+    display: block;
+    font-weight: bold;
+}
+
+
+/* Mailchimp Email Signup
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+.mailchimp-int input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    border-radius: 4px;
+    color: #063D6A;
+    border: 1px solid #063d6a29;
+}
+
+.mailchimp-int input[type="submit"] {
+    background: #88c800;
+    border: 0;
+    color: #fff;
+    padding: 5px;
+    width: 19%;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Condensed Email Sign Up Form */
+#mc_embed_signup.email-form div#mc_embed_signup_scroll {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mc_embed_signup.email-form div#mc_embed_signup_scroll input#mce-EMAIL {
+    width: 80%;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #063d6a29;
+}
+
+#mc_embed_signup.email-form div#mc_embed_signup_scroll div.clear {
+    width: 120px;
+}
+
+#mc_embed_signup.email-form div#mc_embed_signup_scroll div.clear input#mc-embedded-subscribe {
+    width: 120px;
+}
+
+
+/* Footer
+ * ===================================== */
+
+.footer-menu ul#menu-footer-menu li,
+.footer-menu ul#menu-footer-menu li a {
+    display: block;
+    width: 100%;
+    color: #063d6a;
+    font-size: 13px !important;
+}
+
+
+/* Footer Email Sign Up
+ * ============================ */
+.email-signup .et_contact_bottom_container {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0 !important;
+}
+
+.email-signup button,
+.email-signup button:hover {
+    width: 100%;
+    margin: 0 0 0 8px;
+    font-weight: bold;
+    font-size: 15px !important;
+    padding: 8px !important;
+}
+
+
+/* Mailchimp Footer Integration */
+#mc_embed_signup.email-sign-footer input[type=text], 
+#mc_embed_signup.email-sign-footer input[type=email] {
+    background: rgba(6, 61, 106, 0.06);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+#mc_embed_signup.email-sign-footer input[type=submit] {
+    background: #88C800;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+
+/* Footer Mobile Styles */
+
+@media (max-width: 980px) {
+
+    .footer-menu .et-menu.nav,
+    .footer-menu.et_pb_menu .et_pb_menu__menu {
+        display: block !important;
+    }
+
+    .footer-menu .et_mobile_nav_menu {
+        display: none !important;
+    }
+
+    .footer-menu .et_pb_menu__wrap {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .footer-rows .et_pb_column {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 50px !important;
+        margin-left: 0px !Important;
+        margin-right: 0px !Important;
+    }
+ 
+    .footer-rows .et_pb_image_wrap {
+        margin: 0px auto !important;
+        display: block !important;
+    }
+	
+	
+	.footer-rows .footer-logo {
+		text-align: center !important;
+		margin: 0 auto 50px !important;
+	}
+	
+	.et_pb_image_0_tb_footer.et_pb_module.footer-logo {
+		margin-left: auto !important;
+	}
+       
+}
+
+
+
+
+
+
+/* Custom Stats
+ * ======================================== */
+.custom-stat .percent {
+	color: #88C800;
+	font-weight: bold;
+}
+
+
+
+/* Swap Columns on Mobile
+ * ============================ */
+
+@media only screen and (max-width: 980px) {	
+
+
+	/* Column Reordering on Mobile */
+	.custom_row {
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	-webkit-flex-wrap: wrap; /* Safari 6.1+ */
+	flex-wrap: wrap;
+	}
+
+	.first-on-mobile {
+	-webkit-order: 1;
+	order: 1;
+	}
+
+	.second-on-mobile {
+	-webkit-order: 2;
+	order: 2;
+	}
+
+	.third-on-mobile {
+	-webkit-order: 3;
+	order: 3;
+	}
+
+	.fourth-on-mobile {
+	-webkit-order: 4;
+	order: 4;
+	}
+	/* add margin to last column */
+	.custom_row:last-child .et_pb_column:last-child {
+	margin-bottom: 30px;
+	}
+}
+
+/* Success Stories Slider
+ * ============================ */
+
+.success-slider .et_pb_slider_container_inner {
+    display: flex;
+    align-items: center;
+}
+
+.success-slider .et_pb_slide_image {
+    order: 2;
+    right: 0;
+    position: relative;
+}
+
+.success-slider .et_pb_slide_description {
+    order: 1;
+    margin: 0;
+}
+
+.success-slider .et_pb_slide_image img {
+    width: 450px;
+    height: auto !important;
+    max-height: initial !important;
+	transform: scale(1.2) !important;
+    object-position: top;
+    top: 50;
+    position: relative;
+}
+
+.success-slider h2.et_pb_slide_title::before {
+    content: "Success Stories";
+    display: block;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    font-size: 17px;
+    text-shadow: none;
+}
+
+
+/* Our Team
+ * ============================ */
+
+.our-team a.entry-featured-image-url img {
+    object-fit: cover !important;
+    width: 250px !important;
+    height: 250px !important;
+    min-width: 250px !important;
+    min-height: 250px !important;
+    border-radius: 50%;
+}
+
+/* Active Buttons */
+#our-staff a#our-staff,
+#board a#board,
+#next-gen a#next-gen {
+    background: #188BFF;
+    color: #fff !important;
+}
+
+
+/* Next Gen Council */
+
+.next-gen.person img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+/* Featured News Block
+ * =========================== */
+
+.featured-news {
+    display: block;
+/*     margin-bottom: 100px !important;
+    min-height: 500px; */
+}
+
+.featured-news article {
+    padding: 0px !important;
+    margin: 0px;
+    position: relative;
+    height: 215px;
+}
+
+.featured-news h2.entry-title {
+/*     z-index: 9;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 30px;
+    bottom: 30px; */	
+	z-index: 9;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    background-image: linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(6, 61, 106, 0.9) 100%);
+    padding: 0px 70px 40px 40px !important;
+    text-shadow: 1px 2px 2px #061929a3;
+	width: 100%;
+}
+
+.featured-news article .et_pb_image_container {
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: absolute;
+}
+
+.featured-news article .et_pb_image_container img {
+    object-fit: cover;
+    height: 217px;
+}
+	
+.featured-news .column.size-1of3:first-child {
+    width: 65% !important;
+    margin-right: 50px !important;
+	/* height: 450px !important; */
+}
+
+.featured-news .column.size-1of3:first-child article img {
+    width: initial;
+    height: 473px;
+    object-fit: cover;
+}
+
+.featured-news .et_pb_salvattore_content {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+}
+
+.featured-news .column.size-1of3 {
+    width: 30% !important;
+    margin: 0px !important;
+    float: left;
+    min-height: 235px;
+}
+
+.featured-news .column.size-1of3:first-child article {
+    height: 471px;
+}
+
+.featured-news .column.size-1of3:first-child article h2.entry-title {
+    font-size: 33px;
+    padding-right: 80px;
+}
+
+.featured-news .column.size-1of3:first-child article h2.entry-title::before {
+	content: "Featured Post";
+	display: block;
+	font-size: 18px;
+	text-transform: uppercase;
+	opacity: 0.85;
+}
+
+/* .featured-news article .et_pb_image_container::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-image: linear-gradient(180deg,rgba(255,255,255,0) 57%,rgba(6,61,106,0.64) 100%);
+ } */
+
+.featured-news article .entry-featured-image-url {
+    margin-bottom: 0;
+}
+
+
+
+
+/* CPT News Feed
+ * ================================= */
+
+.news-feed-links h2 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.news-feed-links .news-block {
+    margin: 30px 0;
+}
+
+.news-feed-links .news-date {
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: .5;
+}
+
+
+/********* Mobile Menu Collapse ********/
+ 
+#main-header .et_mobile_menu li ul.hide {
+    display: none !important;
+}
+ 
+#mobile_menu .menu-item-has-children {
+    position: relative;
+}
+#mobile_menu .menu-item-has-children > a {
+    background: transparent;
+}
+ 
+#mobile_menu .menu-item-has-children > a + span {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: normal;
+	cursor: pointer;
+	z-index: 3;
+}
+ 
+span.menu-closed:before {
+	content: "+";
+	display: block;
+	font-size: 16px;
+/* 	font-family: ETmodules; */
+}
+ 
+span.menu-closed.menu-open:before {
+	content: "-";
+}
+
+ul#mobile_menu li.current_page_parent a {
+    color: #88C800;
+}
+
+/* General Page Header
+ * =========================== */
+
+@media screen and (max-width: 980px) {
+	div.et_pb_section.page-hdr,
+	div.et_pb_section.page-hdr.et_pb_with_background.et_section_regular {
+		background-image: none !important;
+		background-repeat: none;
+		background: #188BFF;
+	}
+
+	div.et_pb_section.page-hdr h2 {
+		font-size: 24px;
+	}
+}
+
+
+/* About Us - Our History
+ * ============================= */
+
+.two-col-style {
+	column-count: 2;
+	column-gap: 40px
+}
+
+@media screen and (max-width: 980px) {
+	.two-col-style {
+		column-count: 1;
+	}
+}
+
+
+/* Custom Post Type Data Feeds
+ * ============================== */
+ .cpt-feed {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: start;
+}
+.cpt-feed .cpt-feed-block {
+	background: white;
+	padding: 35px;
+	box-shadow: 0px 12px 18px -6px rgba(6,61,106,0.13);
+	width: 29%;
+	border-radius: 5px;
+	margin: 20px;
+}
+.cpt-feed .cpt-feed-block .news-date {
+	font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(6,61,106,0.6)!important;
+    letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.cpt-feed .cpt-feed-block span.news-author {
+	font-size: 60%;
+	display: block;
+	font-weight: 500 !important;
+    margin-top: 10px;
+}
+.cpt-feed .cpt-feed-block span.news-author:before {
+	content: "— ";
+}
+.cpt-feed .cpt-feed-block h2 {
+	font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+.cpt-feed div#custom-bg {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+	.cpt-feed .cpt-feed-block {
+		width: 45%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.cpt-feed .cpt-feed-block {
+		width: 100%;
+	}
+}
+
+
+/* Custom Form Assembly Form Styles
+ * =============================================== */
+
+.custom-form-assembly .wFormContainer .wFormHeader {
+    height: unset !important;
+	background-image: none !important;
+}
+
+
+/* Course Blocks
+ * =============================================== */
+
+.course-block {
+    width: 33.33%;
+    float: left;
+}
+
+
+@media (max-width: 1175px) {
+   .course-block {
+        width: 100%;
+        float: unset;
+        display: block;
+    } 
+	
+	.course-block h2 {
+		font-size: 20px !important;
+	}
+}
+
+@media (max-width: 980px) {
+	#byteback-sub-nav {
+		display: none; 
+	}
+}
+
+
+
+
+
+
